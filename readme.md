@@ -5,7 +5,6 @@
 - Define dependencies in pom.xml
 - Modify application.properties, for database connection
 - Build
-- Check app using curls
 
 ## BUILD the application
 ./mvnw clean install
