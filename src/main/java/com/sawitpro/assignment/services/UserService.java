@@ -5,7 +5,7 @@ import com.sawitpro.assignment.model.request.RegistrationReq;
 
 public interface UserService {
     User getDetail(String phoneNumber);
-    void registration(RegistrationReq registrationReq);
+    User registration(RegistrationReq registrationReq);
     String login(String phoneNumber,String password);
-    String updateName(String name);
+    String updateName(String phoneNumber,String name);
 }
