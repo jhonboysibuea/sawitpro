@@ -4,9 +4,7 @@ import com.sawitpro.assignment.model.User;
 import com.sawitpro.assignment.model.request.RegistrationReq;
 import com.sawitpro.assignment.repository.UserRepository;
 import com.sawitpro.assignment.security.JwtTokenProvider;
-import com.sawitpro.assignment.services.UserService;
 import com.sawitpro.assignment.services.UserServiceImpl;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,15 +14,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-
-import java.util.Optional;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.willDoNothing;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class UserServiceTests {
