@@ -37,6 +37,9 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User registration(RegistrationReq registrationReq) {
+        User userExist=userRepository.findByPhoneNumber(registrationReq.getPhoneNumber());
+        if(userExist!=null)
+            throw new CustomException("phone number already exist",HttpStatus.BAD_REQUEST);
         User user=new User();
         BeanUtils.copyProperties(registrationReq,user);
         user.setPassword(passwordEncoder.encode(registrationReq.getPassword()));

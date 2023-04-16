@@ -12,13 +12,13 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegistrationReq {
-    @Size(min = 10, max = 13, message = "Minimum phoneNumber length: 10 characters, max=13")
-    @Pattern(regexp = "^08.*", message = "start with 08")
+    @Size(min = 10, max = 13, message = " Minimum  length: 10 characters, max=13")
+    @Pattern(regexp = "^08.*", message = " start with 08")
     private String phoneNumber;
-    @NotEmpty(message = "can't empty")
-    @Size(min=10,max=60,message="Max name length=60")
+    @NotEmpty(message = " can't empty")
+    @Size(min=5,max=60,message=" Min 5, Max name length=60")
     private String name;
-    @Size(min = 6, max = 16, message = "Minimum phoneNumber length: 10 characters, max=13")
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[A-Z]).+$",message = "1 number,1 capital")
+    @Size(min = 6, max = 16, message = " Minimum phoneNumber length: 10 characters, max=13")
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[A-Z]).+$",message = " 1 number,1 capital")
     private String password;
 }

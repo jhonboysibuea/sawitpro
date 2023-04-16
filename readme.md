@@ -7,10 +7,11 @@
 - Build
 
 ## BUILD the application
-./mvnw clean install
+./mvnw clean install -DskipTests
 
 ## BUILD AND UP Docker Compose
-docker-compose up --build
+docker compose up -d
+docker logs container_ID
 
 ## API DOCUMENTATION
 http://localhost:8080/swagger-ui/index.html
